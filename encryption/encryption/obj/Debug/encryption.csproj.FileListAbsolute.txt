@@ -102,3 +102,8 @@ C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\qualifier
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\qualifiers.txt.intermediate
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ProjectArchitectures.txt
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\ContactSelectPage.xbf
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ContactSelectPage.g.i.cs
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ContactSelectPage.g.cs
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ContactSelectPage.xaml
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ContactSelectPage.xbf
