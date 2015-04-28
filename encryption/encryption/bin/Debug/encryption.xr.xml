@@ -12,8 +12,17 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="Background" />
+      <RootEvent Name="Loaded" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition" />
@@ -24,17 +33,10 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootEvent Name="Tapped" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Style" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="CharacterSpacing" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
@@ -42,11 +44,25 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Inlines" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="FontStretch" />
+      <RootProperty Name="Visibility" />
+      <RootEvent Name="Tapped" />
+    </RootType>
+    <RootType FullName="encryption.ContactSelectPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="encryption.GenerateKeyPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
