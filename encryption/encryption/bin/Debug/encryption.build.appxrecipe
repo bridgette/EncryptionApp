@@ -7,64 +7,64 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>f528c27f-1adc-4c9d-96b0-498cea834575</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\breiche\Desktop\onetimepad\encryption\encryption\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\bin\Debug\encryption.exe">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\encryption.exe">
       <PackagePath>encryption.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\Assets\Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\Assets\SmallLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\Assets\SplashScreen.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\Assets\Square71x71Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\Assets\StoreLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\Assets\WideLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\bin\Debug\GenerateKeyPage.xbf">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\GenerateKeyPage.xbf">
       <PackagePath>GenerateKeyPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\bin\Debug\GetKeyPage.xbf">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\GetKeyPage.xbf">
       <PackagePath>GetKeyPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\bin\Debug\NewMessagePage.xbf">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\NewMessagePage.xbf">
       <PackagePath>NewMessagePage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\bin\Debug\ShareKeyPage.xbf">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\ShareKeyPage.xbf">
       <PackagePath>ShareKeyPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\bin\Debug\encryption.xr.xml">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\encryption.xr.xml">
       <PackagePath>encryption.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\onetimepad\encryption\encryption\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

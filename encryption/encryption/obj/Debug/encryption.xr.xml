@@ -55,11 +55,13 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Foreground" />
+      <RootEvent Name="GotFocus" />
+      <RootEvent Name="LostFocus" />
     </RootType>
     <RootType FullName="encryption.GetKeyPage" />
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
-      <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="encryption.MainPage" />

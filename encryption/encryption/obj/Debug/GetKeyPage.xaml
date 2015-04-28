@@ -28,10 +28,10 @@
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-        	<TextBox x:Name="key_textbox" HorizontalAlignment="Left" Margin="50,213,0,0" TextWrapping="Wrap" Text="Copy their key here" VerticalAlignment="Top" Height="220" Width="268"/>
+        	<TextBox x:ConnectionId='1' x:Name="key_textbox" HorizontalAlignment="Left" Margin="50,213,0,0" TextWrapping="Wrap" Text="Copy their key here" VerticalAlignment="Top" Height="220" Width="268"                                                                        />
         	<TextBlock x:Name="whichcontact_textblock" HorizontalAlignment="Left" Margin="84,23,0,0" TextWrapping="Wrap" Text="Which contact is this key for?" VerticalAlignment="Top" FontSize="14"/>
-        	<TextBlock x:ConnectionId='1' x:Name="selectcontact_textblock" HorizontalAlignment="Left" Margin="84,77,0,0" TextWrapping="Wrap" Text="Select contact" VerticalAlignment="Top" Height="36" Width="153" FontSize="25"                             />
-        	<Button x:ConnectionId='2' x:Name="savekey_button" Content="Save Key" HorizontalAlignment="Left" Margin="209,437,0,0" VerticalAlignment="Top"                       />
+        	<TextBlock x:ConnectionId='2' x:Name="selectcontact_textblock" HorizontalAlignment="Left" Margin="84,77,0,0" TextWrapping="Wrap" Text="Select contact" VerticalAlignment="Top" Height="36" Width="153" FontSize="25"                             />
+        	<Button x:ConnectionId='3' x:Name="savekey_button" Content="Save Key" HorizontalAlignment="Left" Margin="209,437,0,0" VerticalAlignment="Top"                       />
 
         </Grid>
     </Grid>

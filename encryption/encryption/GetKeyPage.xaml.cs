@@ -105,6 +105,7 @@ namespace encryption
         {
             this.navigationHelper.OnNavigatedFrom(e);
         }
+        #endregion
 
         private void savekey_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
@@ -116,6 +117,34 @@ namespace encryption
         	// TODO: Add event handler implementation here.
         }
 
-        #endregion
+        /// <summary>
+        /// erase prepopulated text, change color from grey to black
+        /// save watermark text for later.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        string inital_watermark_text;
+        private void copykeytextbox_gotfocus(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            TextBox t = sender as TextBox;
+            inital_watermark_text = t.Text;
+            t.Text = string.Empty;
+        }
+
+        /// <summary>
+        /// if user went away without entering anything, autofill with prepopulated text
+        // and switch back to grey
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void copykeytextbox_lostfocus(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            TextBox t = sender as TextBox;
+            if (t.Text.Equals(string.Empty))
+            {
+                t.Text = inital_watermark_text;
+
+            }
+        }       
     }
 }

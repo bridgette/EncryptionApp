@@ -105,13 +105,36 @@ namespace encryption
         {
             this.navigationHelper.OnNavigatedFrom(e);
         }
+        #endregion
 
+        /// <summary>
+        /// erase prepopulated text, change color from grey to black
+        /// save watermark text for later.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        string inital_watermark_text;
         private void messagetextbox_gotfocus(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-        	// TODO: erase prepopulated text, change color from grey to black
-			// TODO: if user went away without entering anything, autofill with prepopulated text
-			// and switch back to grey
+            TextBox t = sender as TextBox;
+            inital_watermark_text = t.Text;
+            t.Text = string.Empty;
         }
-        #endregion
+
+        /// <summary>
+        /// if user went away without entering anything, autofill with prepopulated text
+        // and switch back to grey
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void messagetextbox_lostfocus(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            TextBox t = sender as TextBox;
+            if (t.Text.Equals(string.Empty)) {
+                t.Text = inital_watermark_text;
+
+            }
+        }
+
     }
 }
