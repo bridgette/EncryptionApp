@@ -1,4 +1,6 @@
 ﻿using encryption.Common;
+using encryption.Crypto;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -109,8 +111,16 @@ namespace encryption
         private void createkeybutton_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
         	// TODO: Add event handler implementation here.
+
+            PgpPublicKeyRing publicKey;
+            PgpSecretKeyRing privateKey;
+
+            PGP.GenerateKeyPair(userid_box.Text, password_box.Text, out publicKey, out privateKey);
+
+            KeyStore.Instance.StoreKeyPair(privateKey, publicKey);
         }
 
         #endregion
+
     }
 }

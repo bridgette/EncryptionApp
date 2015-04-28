@@ -28,7 +28,11 @@
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-        	<Button x:Name="create_button" Content="Create key!" HorizontalAlignment="Left" Margin="127,90,0,0" VerticalAlignment="Top" Tapped="createkeybutton_ontap"/>
+        	<Button x:Name="create_button" Content="Create key!" HorizontalAlignment="Left" Margin="127,90,0,0" VerticalAlignment="Top" Tapped="createkeybutton_ontap" />
+            <TextBox x:Name="password_box" HorizontalAlignment="Left" Margin="24,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="301"/>
+            <TextBox x:Name="userid_box" HorizontalAlignment="Left" Margin="24,197,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="301"/>
+            <TextBlock HorizontalAlignment="Left" Margin="24,179,0,0" TextWrapping="Wrap" Text="Name or Email" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="24,269,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
 
         </Grid>
     </Grid>
