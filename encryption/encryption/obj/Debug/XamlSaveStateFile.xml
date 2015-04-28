@@ -1,10 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-<<<<<<< HEAD
     <LocalAssembly PathName="c:\users\breiche\desktop\onetimepad\encryption\encryption\obj\debug\intermediatexaml\encryption.exe" HashGuid="342b829b-1dda-14bb-bad9-f71e547da4f3" />
     <ReferenceAssembly PathName="d:\wp8bouncycastle.dll" HashGuid="b19e1266-6d25-6436-60e4-72212823d4d2" />
-=======
-    <LocalAssembly PathName="c:\users\breiche\desktop\encryptionapp\encryption\encryption\obj\debug\intermediatexaml\encryption.exe" HashGuid="7785e3f5-7153-aec8-f6f5-06f7e58a1bb0" />
->>>>>>> origin/master
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>
