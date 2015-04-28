@@ -1,4 +1,5 @@
 ﻿using encryption.Common;
+using encryption.Crypto;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -111,9 +112,14 @@ namespace encryption
         	// TODO: Add event handler implementation here.
         }
 
-        private void sharebutton_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        private async void sharebutton_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+            // Raw binary key
+            byte[] key = await KeyStore.Instance.GetMyPublicKey();
+
+            // Base64 encoded key
+            string textKey = PGP.ByteKeyToText(key);
+
         }
 
         #endregion

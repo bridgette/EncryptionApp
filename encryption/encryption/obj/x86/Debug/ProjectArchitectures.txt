@@ -1,1 +1,0 @@
-D:\Home\Documents\GitHub\EncryptionApp\encryption\encryption\encryption.csproj;x86

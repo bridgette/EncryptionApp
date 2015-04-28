@@ -1,9 +1,11 @@
 ﻿using encryption.Common;
+using encryption.Crypto;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
@@ -107,14 +109,16 @@ namespace encryption
         }
         #endregion
 
-        private void savekey_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        private async void savekey_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+
+            await KeyStore.Instance.AddPublicKey("conact@email.org", Encoding.UTF8.GetBytes(key_textbox.Text));
         }
 
         private void selectcontact_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-        	// TODO: Add event handler implementation here.
+            // TODO: Add event handler implementation here.
+
         }
 
         /// <summary>

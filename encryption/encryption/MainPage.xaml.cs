@@ -1,4 +1,5 @@
-﻿using System;
+﻿using encryption.Crypto;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,6 +28,8 @@ namespace encryption
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            KeyStore.Instance.Init();
         }
 
         /// <summary>

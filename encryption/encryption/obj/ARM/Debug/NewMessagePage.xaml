@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="encryption.NewMessagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:encryption"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+    	<TextBox x:ConnectionId='1' x:Name="message_textbox" HorizontalAlignment="Left" Margin="45,169,0,0" TextWrapping="Wrap" Text="Enter message here" VerticalAlignment="Top" Height="292" Width="305"                                    Foreground="#FF626262"                                     />
+    	<Button Content="Send" HorizontalAlignment="Left" Margin="144,508,0,0" VerticalAlignment="Top"/>
+    	<TextBlock x:Name="keyfound_textblock" HorizontalAlignment="Left" Margin="111,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13" Text="Key for Contact Found"/>
+    	<TextBlock x:Name="explaination_textblock" HorizontalAlignment="Left" Margin="88,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" FontWeight="Light">
+    		<Run Text="Pick a c"/>
+    		<Run Text="ontact"/>
+    	</TextBlock>
+
+    </Grid>
+</Page>
+

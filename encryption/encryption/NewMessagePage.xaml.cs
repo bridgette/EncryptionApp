@@ -1,9 +1,11 @@
 ﻿using encryption.Common;
+using encryption.Crypto;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
@@ -134,6 +136,15 @@ namespace encryption
                 t.Text = inital_watermark_text;
 
             }
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            byte[] message = Encoding.UTF8.GetBytes(message_textbox.Text);
+            byte[] publicKey = await KeyStore.Instance.GetPublicKey("conact@email.address");
+
+            byte[] dataToSend = PGP.Encrypt(message, publicKey, true, true);
+
         }
 
     }

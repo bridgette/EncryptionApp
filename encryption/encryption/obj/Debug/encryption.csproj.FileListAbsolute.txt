@@ -102,3 +102,13 @@ C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\qualifier
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\qualifiers.txt.intermediate
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ProjectArchitectures.txt
+<<<<<<< HEAD
+D:\Home\Documents\GitHub\EncryptionApp\encryption\encryption\obj\Debug\encryption.exe
+D:\Home\Documents\GitHub\EncryptionApp\encryption\encryption\obj\Debug\encryption.pdb
+=======
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\ContactSelectPage.xbf
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ContactSelectPage.g.i.cs
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ContactSelectPage.g.cs
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ContactSelectPage.xaml
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ContactSelectPage.xbf
+>>>>>>> origin/master
