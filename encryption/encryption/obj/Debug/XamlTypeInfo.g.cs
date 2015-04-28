@@ -124,8 +124,8 @@ namespace encryption.encryption_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[13];
-            _typeNameTable[0] = "encryption.ContactSelectPage";
+            _typeNameTable = new string[12];
+            _typeNameTable[0] = "encryption.GenerateKeyPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "encryption.Common.NavigationHelper";
@@ -133,14 +133,13 @@ namespace encryption.encryption_XamlTypeInfo
             _typeNameTable[5] = "encryption.Common.ObservableDictionary";
             _typeNameTable[6] = "Object";
             _typeNameTable[7] = "String";
-            _typeNameTable[8] = "encryption.GenerateKeyPage";
-            _typeNameTable[9] = "encryption.GetKeyPage";
-            _typeNameTable[10] = "encryption.MainPage";
-            _typeNameTable[11] = "encryption.NewMessagePage";
-            _typeNameTable[12] = "encryption.ShareKeyPage";
+            _typeNameTable[8] = "encryption.GetKeyPage";
+            _typeNameTable[9] = "encryption.MainPage";
+            _typeNameTable[10] = "encryption.NewMessagePage";
+            _typeNameTable[11] = "encryption.ShareKeyPage";
 
-            _typeTable = new global::System.Type[13];
-            _typeTable[0] = typeof(global::encryption.ContactSelectPage);
+            _typeTable = new global::System.Type[12];
+            _typeTable[0] = typeof(global::encryption.GenerateKeyPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::encryption.Common.NavigationHelper);
@@ -148,11 +147,10 @@ namespace encryption.encryption_XamlTypeInfo
             _typeTable[5] = typeof(global::encryption.Common.ObservableDictionary);
             _typeTable[6] = typeof(global::System.Object);
             _typeTable[7] = typeof(global::System.String);
-            _typeTable[8] = typeof(global::encryption.GenerateKeyPage);
-            _typeTable[9] = typeof(global::encryption.GetKeyPage);
-            _typeTable[10] = typeof(global::encryption.MainPage);
-            _typeTable[11] = typeof(global::encryption.NewMessagePage);
-            _typeTable[12] = typeof(global::encryption.ShareKeyPage);
+            _typeTable[8] = typeof(global::encryption.GetKeyPage);
+            _typeTable[9] = typeof(global::encryption.MainPage);
+            _typeTable[10] = typeof(global::encryption.NewMessagePage);
+            _typeTable[11] = typeof(global::encryption.ShareKeyPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -187,13 +185,12 @@ namespace encryption.encryption_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_ContactSelectPage() { return new global::encryption.ContactSelectPage(); }
+        private object Activate_0_GenerateKeyPage() { return new global::encryption.GenerateKeyPage(); }
         private object Activate_5_ObservableDictionary() { return new global::encryption.Common.ObservableDictionary(); }
-        private object Activate_8_GenerateKeyPage() { return new global::encryption.GenerateKeyPage(); }
-        private object Activate_9_GetKeyPage() { return new global::encryption.GetKeyPage(); }
-        private object Activate_10_MainPage() { return new global::encryption.MainPage(); }
-        private object Activate_11_NewMessagePage() { return new global::encryption.NewMessagePage(); }
-        private object Activate_12_ShareKeyPage() { return new global::encryption.ShareKeyPage(); }
+        private object Activate_8_GetKeyPage() { return new global::encryption.GetKeyPage(); }
+        private object Activate_9_MainPage() { return new global::encryption.MainPage(); }
+        private object Activate_10_NewMessagePage() { return new global::encryption.NewMessagePage(); }
+        private object Activate_11_ShareKeyPage() { return new global::encryption.ShareKeyPage(); }
         private void MapAdd_5_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
@@ -212,9 +209,9 @@ namespace encryption.encryption_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  encryption.ContactSelectPage
+            case 0:   //  encryption.GenerateKeyPage
                 userType = new global::encryption.encryption_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_ContactSelectPage;
+                userType.Activator = Activate_0_GenerateKeyPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
@@ -256,43 +253,34 @@ namespace encryption.encryption_XamlTypeInfo
                 xamlType = new global::encryption.encryption_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  encryption.GenerateKeyPage
+            case 8:   //  encryption.GetKeyPage
                 userType = new global::encryption.encryption_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_GenerateKeyPage;
+                userType.Activator = Activate_8_GetKeyPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  encryption.GetKeyPage
+            case 9:   //  encryption.MainPage
                 userType = new global::encryption.encryption_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_GetKeyPage;
+                userType.Activator = Activate_9_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  encryption.NewMessagePage
+                userType = new global::encryption.encryption_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_NewMessagePage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  encryption.MainPage
+            case 11:   //  encryption.ShareKeyPage
                 userType = new global::encryption.encryption_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_MainPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 11:   //  encryption.NewMessagePage
-                userType = new global::encryption.encryption_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_NewMessagePage;
-                userType.AddMemberName("NavigationHelper");
-                userType.AddMemberName("DefaultViewModel");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 12:   //  encryption.ShareKeyPage
-                userType = new global::encryption.encryption_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_ShareKeyPage;
+                userType.Activator = Activate_11_ShareKeyPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
@@ -303,52 +291,42 @@ namespace encryption.encryption_XamlTypeInfo
         }
 
 
-        private object get_0_ContactSelectPage_NavigationHelper(object instance)
-        {
-            var that = (global::encryption.ContactSelectPage)instance;
-            return that.NavigationHelper;
-        }
-        private object get_1_ContactSelectPage_DefaultViewModel(object instance)
-        {
-            var that = (global::encryption.ContactSelectPage)instance;
-            return that.DefaultViewModel;
-        }
-        private object get_2_GenerateKeyPage_NavigationHelper(object instance)
+        private object get_0_GenerateKeyPage_NavigationHelper(object instance)
         {
             var that = (global::encryption.GenerateKeyPage)instance;
             return that.NavigationHelper;
         }
-        private object get_3_GenerateKeyPage_DefaultViewModel(object instance)
+        private object get_1_GenerateKeyPage_DefaultViewModel(object instance)
         {
             var that = (global::encryption.GenerateKeyPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_4_GetKeyPage_NavigationHelper(object instance)
+        private object get_2_GetKeyPage_NavigationHelper(object instance)
         {
             var that = (global::encryption.GetKeyPage)instance;
             return that.NavigationHelper;
         }
-        private object get_5_GetKeyPage_DefaultViewModel(object instance)
+        private object get_3_GetKeyPage_DefaultViewModel(object instance)
         {
             var that = (global::encryption.GetKeyPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_6_NewMessagePage_NavigationHelper(object instance)
+        private object get_4_NewMessagePage_NavigationHelper(object instance)
         {
             var that = (global::encryption.NewMessagePage)instance;
             return that.NavigationHelper;
         }
-        private object get_7_NewMessagePage_DefaultViewModel(object instance)
+        private object get_5_NewMessagePage_DefaultViewModel(object instance)
         {
             var that = (global::encryption.NewMessagePage)instance;
             return that.DefaultViewModel;
         }
-        private object get_8_ShareKeyPage_NavigationHelper(object instance)
+        private object get_6_ShareKeyPage_NavigationHelper(object instance)
         {
             var that = (global::encryption.ShareKeyPage)instance;
             return that.NavigationHelper;
         }
-        private object get_9_ShareKeyPage_DefaultViewModel(object instance)
+        private object get_7_ShareKeyPage_DefaultViewModel(object instance)
         {
             var that = (global::encryption.ShareKeyPage)instance;
             return that.DefaultViewModel;
@@ -361,64 +339,52 @@ namespace encryption.encryption_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "encryption.ContactSelectPage.NavigationHelper":
-                userType = (global::encryption.encryption_XamlTypeInfo.XamlUserType)GetXamlTypeByName("encryption.ContactSelectPage");
-                xamlMember = new global::encryption.encryption_XamlTypeInfo.XamlMember(this, "NavigationHelper", "encryption.Common.NavigationHelper");
-                xamlMember.Getter = get_0_ContactSelectPage_NavigationHelper;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "encryption.ContactSelectPage.DefaultViewModel":
-                userType = (global::encryption.encryption_XamlTypeInfo.XamlUserType)GetXamlTypeByName("encryption.ContactSelectPage");
-                xamlMember = new global::encryption.encryption_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "encryption.Common.ObservableDictionary");
-                xamlMember.Getter = get_1_ContactSelectPage_DefaultViewModel;
-                xamlMember.SetIsReadOnly();
-                break;
             case "encryption.GenerateKeyPage.NavigationHelper":
                 userType = (global::encryption.encryption_XamlTypeInfo.XamlUserType)GetXamlTypeByName("encryption.GenerateKeyPage");
                 xamlMember = new global::encryption.encryption_XamlTypeInfo.XamlMember(this, "NavigationHelper", "encryption.Common.NavigationHelper");
-                xamlMember.Getter = get_2_GenerateKeyPage_NavigationHelper;
+                xamlMember.Getter = get_0_GenerateKeyPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "encryption.GenerateKeyPage.DefaultViewModel":
                 userType = (global::encryption.encryption_XamlTypeInfo.XamlUserType)GetXamlTypeByName("encryption.GenerateKeyPage");
                 xamlMember = new global::encryption.encryption_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "encryption.Common.ObservableDictionary");
-                xamlMember.Getter = get_3_GenerateKeyPage_DefaultViewModel;
+                xamlMember.Getter = get_1_GenerateKeyPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "encryption.GetKeyPage.NavigationHelper":
                 userType = (global::encryption.encryption_XamlTypeInfo.XamlUserType)GetXamlTypeByName("encryption.GetKeyPage");
                 xamlMember = new global::encryption.encryption_XamlTypeInfo.XamlMember(this, "NavigationHelper", "encryption.Common.NavigationHelper");
-                xamlMember.Getter = get_4_GetKeyPage_NavigationHelper;
+                xamlMember.Getter = get_2_GetKeyPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "encryption.GetKeyPage.DefaultViewModel":
                 userType = (global::encryption.encryption_XamlTypeInfo.XamlUserType)GetXamlTypeByName("encryption.GetKeyPage");
                 xamlMember = new global::encryption.encryption_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "encryption.Common.ObservableDictionary");
-                xamlMember.Getter = get_5_GetKeyPage_DefaultViewModel;
+                xamlMember.Getter = get_3_GetKeyPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "encryption.NewMessagePage.NavigationHelper":
                 userType = (global::encryption.encryption_XamlTypeInfo.XamlUserType)GetXamlTypeByName("encryption.NewMessagePage");
                 xamlMember = new global::encryption.encryption_XamlTypeInfo.XamlMember(this, "NavigationHelper", "encryption.Common.NavigationHelper");
-                xamlMember.Getter = get_6_NewMessagePage_NavigationHelper;
+                xamlMember.Getter = get_4_NewMessagePage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "encryption.NewMessagePage.DefaultViewModel":
                 userType = (global::encryption.encryption_XamlTypeInfo.XamlUserType)GetXamlTypeByName("encryption.NewMessagePage");
                 xamlMember = new global::encryption.encryption_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "encryption.Common.ObservableDictionary");
-                xamlMember.Getter = get_7_NewMessagePage_DefaultViewModel;
+                xamlMember.Getter = get_5_NewMessagePage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "encryption.ShareKeyPage.NavigationHelper":
                 userType = (global::encryption.encryption_XamlTypeInfo.XamlUserType)GetXamlTypeByName("encryption.ShareKeyPage");
                 xamlMember = new global::encryption.encryption_XamlTypeInfo.XamlMember(this, "NavigationHelper", "encryption.Common.NavigationHelper");
-                xamlMember.Getter = get_8_ShareKeyPage_NavigationHelper;
+                xamlMember.Getter = get_6_ShareKeyPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "encryption.ShareKeyPage.DefaultViewModel":
                 userType = (global::encryption.encryption_XamlTypeInfo.XamlUserType)GetXamlTypeByName("encryption.ShareKeyPage");
                 xamlMember = new global::encryption.encryption_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "encryption.Common.ObservableDictionary");
-                xamlMember.Getter = get_9_ShareKeyPage_DefaultViewModel;
+                xamlMember.Getter = get_7_ShareKeyPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }

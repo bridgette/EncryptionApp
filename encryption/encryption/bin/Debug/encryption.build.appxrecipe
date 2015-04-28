@@ -46,9 +46,6 @@
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\ContactSelectPage.xbf">
-      <PackagePath>ContactSelectPage.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\Debug\GenerateKeyPage.xbf">
       <PackagePath>GenerateKeyPage.xbf</PackagePath>
     </AppxPackagedFile>

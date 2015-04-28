@@ -23,21 +23,15 @@
 
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="get key" Margin="0,-6.5,-0.167,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" Height="82"/>
+            <TextBlock Text="get key" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
-        <Grid x:Name="ContentRoot" Margin="19,75,19,0" Grid.RowSpan="2">
-        	<Grid.ColumnDefinitions>
-        		<ColumnDefinition Width="185*"/>
-        		<ColumnDefinition Width="110*"/>
-        		<ColumnDefinition Width="60*"/>
-        		<ColumnDefinition Width="7*"/>
-        	</Grid.ColumnDefinitions>
-        	<TextBox x:ConnectionId='1' x:Name="key_textbox" HorizontalAlignment="Left" Margin="23,106,0,0" TextWrapping="Wrap" Text="Copy their public key here" VerticalAlignment="Top" Height="122" Width="308"                                                                         Grid.ColumnSpan="3"/>
-        	<TextBlock x:Name="whichcontact_textblock" HorizontalAlignment="Left" Margin="23,22,0,0" TextWrapping="Wrap" Text="Which contact is this key for?" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
-        	<TextBlock x:ConnectionId='2' x:Name="selectcontact_textblock" HorizontalAlignment="Left" Margin="23,44,0,0" TextWrapping="Wrap" Text="Select contact" VerticalAlignment="Top" Height="36" Width="181" FontSize="25"                              Grid.ColumnSpan="2"/>
-        	<Button x:ConnectionId='3' x:Name="savekey_button" Content="Save Key" HorizontalAlignment="Left" Margin="37,231,0,0" VerticalAlignment="Top"                        Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+        	<TextBox x:ConnectionId='1' x:Name="key_textbox" HorizontalAlignment="Left" Margin="50,213,0,0" TextWrapping="Wrap" Text="Copy their key here" VerticalAlignment="Top" Height="220" Width="268"                                                                        />
+        	<TextBlock x:Name="whichcontact_textblock" HorizontalAlignment="Left" Margin="84,23,0,0" TextWrapping="Wrap" Text="Which contact is this key for?" VerticalAlignment="Top" FontSize="14"/>
+        	<TextBlock x:ConnectionId='2' x:Name="selectcontact_textblock" HorizontalAlignment="Left" Margin="84,77,0,0" TextWrapping="Wrap" Text="Select contact" VerticalAlignment="Top" Height="36" Width="153" FontSize="25"                             />
+        	<Button x:ConnectionId='3' x:Name="savekey_button" Content="Save Key" HorizontalAlignment="Left" Margin="209,437,0,0" VerticalAlignment="Top"                       />
 
         </Grid>
     </Grid>

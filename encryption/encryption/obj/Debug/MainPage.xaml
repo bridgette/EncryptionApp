@@ -8,20 +8,18 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="Black">
-    	<Grid.ColumnDefinitions>
-    		<ColumnDefinition Width="9*"/>
-    		<ColumnDefinition Width="41*"/>
-    	</Grid.ColumnDefinitions>
-    	<TextBlock x:ConnectionId='1' x:Name="newmessage_textblock" HorizontalAlignment="Left" Margin="3.333,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="35"                           FontWeight="ExtraLight" Height="55" Width="279" Grid.Column="1">
-    		<Run Text="Send Message"/>
+    <Grid>
+    	<TextBlock x:ConnectionId='1' x:Name="newmessage_textblock" HorizontalAlignment="Left" Margin="120,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"                          >
+    		<Run Text="New message"/>
     		<LineBreak/>
     		<Run/>
     	</TextBlock>
-    	<TextBlock x:ConnectionId='2' x:Name="getkey_textblock" HorizontalAlignment="Left" Margin="3.333,421,0,0" TextWrapping="Wrap" Text="Get Key" VerticalAlignment="Top" FontSize="30"                       FontWeight="ExtraLight" Height="47" Width="209" Grid.Column="1"/>
-    	<TextBlock x:ConnectionId='3' x:Name="createkey_textblock" HorizontalAlignment="Left" Margin="3.333,473,0,0" TextWrapping="Wrap" Text="Create Key" VerticalAlignment="Top" FontSize="30"                          FontWeight="ExtraLight" Height="50" Width="209" Grid.Column="1"/>
-    	<TextBlock x:ConnectionId='4' x:Name="sharekey_textblock" HorizontalAlignment="Left" Margin="3.333,528,0,0" TextWrapping="Wrap" Text="Share Key" VerticalAlignment="Top" FontSize="30"                         FontWeight="ExtraLight" Height="55" Width="209" Grid.Column="1"/>
-    	<TextBlock HorizontalAlignment="Left" Margin="49,0,0,492" TextWrapping="Wrap" Text="Our AppName" FontSize="50" Grid.ColumnSpan="2" Width="341" FontFamily="Microsoft MHei" FontStretch="SemiCondensed" Height="69" VerticalAlignment="Bottom" FontWeight="Light"/>
+    	<TextBlock x:ConnectionId='2' x:Name="getkey_textblock" HorizontalAlignment="Left" Margin="129,187,0,0" TextWrapping="Wrap" Text="Get Key" VerticalAlignment="Top" FontSize="20"                      />
+    	<TextBlock x:ConnectionId='3' x:Name="createkey_textblock" HorizontalAlignment="Left" Margin="129,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"                         >
+    		<Run Text="Create "/>
+    		<Run Text="key"/>
+    	</TextBlock>
+    	<TextBlock x:ConnectionId='4' x:Name="sharekey_textblock" HorizontalAlignment="Left" Margin="132,374,0,0" TextWrapping="Wrap" Text="Share key" VerticalAlignment="Top" FontSize="20"                        />
 
     </Grid>
 </Page>
