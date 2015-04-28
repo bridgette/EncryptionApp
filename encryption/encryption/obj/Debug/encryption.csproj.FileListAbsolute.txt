@@ -102,3 +102,5 @@ C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\qualifier
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\qualifiers.txt.intermediate
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\Debug\ProjectArchitectures.txt
+D:\Home\Documents\GitHub\EncryptionApp\encryption\encryption\obj\Debug\encryption.exe
+D:\Home\Documents\GitHub\EncryptionApp\encryption\encryption\obj\Debug\encryption.pdb

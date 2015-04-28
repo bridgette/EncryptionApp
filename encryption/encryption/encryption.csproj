@@ -80,6 +80,12 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <SDKReference Include="Microsoft.VCLibs, version=12.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows Phone</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.WP81, Version=3.8.9">
+      <Name>SQLite for Windows Phone 8.1</Name>
+    </SDKReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -101,10 +107,17 @@
     <Compile Include="NewMessagePage.xaml.cs">
       <DependentUpon>NewMessagePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Crypto\KeyPair.cs" />
+    <Compile Include="Crypto\KeysDB.cs" />
+    <Compile Include="Crypto\PGP.cs" />
+    <Compile Include="Crypto\KeyStore.cs" />
+    <Compile Include="Crypto\PublicKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShareKeyPage.xaml.cs">
       <DependentUpon>ShareKeyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -144,6 +157,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WP8BouncyCastle">
+      <HintPath>..\..\..\..\..\..\WP8BouncyCastle.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
