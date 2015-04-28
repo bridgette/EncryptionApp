@@ -115,12 +115,15 @@ namespace encryption
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        string inital_watermark_text;
+        string inital_watermark_text = "Enter message here";
         private void messagetextbox_gotfocus(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             TextBox t = sender as TextBox;
-            inital_watermark_text = t.Text;
-            t.Text = string.Empty;
+            if (t.Text == inital_watermark_text)
+            {
+                t.Text = string.Empty;
+                t.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+            }
         }
 
         /// <summary>
@@ -132,11 +135,28 @@ namespace encryption
         private void messagetextbox_lostfocus(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             TextBox t = sender as TextBox;
-            if (t.Text.Equals(string.Empty)) {
+            if (t.Text.Equals(string.Empty))
+            {
                 t.Text = inital_watermark_text;
-
+                t.Foreground = new SolidColorBrush(Windows.UI.Colors.LightGray);
             }
         }
+
+        private void pickcontact_tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            key_found_textblock.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            key_found_textblock.Text = "Found key from database......";
+            return;
+        }
+
+        /// <summary>
+        /// </summary>
+        TextBlock key_found_textblock;
+        private void grid_loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            key_found_textblock = ((Grid)sender).Children[2] as TextBlock;
+        }
+
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
