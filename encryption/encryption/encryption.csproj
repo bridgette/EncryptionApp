@@ -91,7 +91,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Common\DeliveryManager.cs" />
+    <Compile Include="Common\MailHelpercs.cs" />
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
@@ -115,6 +115,9 @@
     <Compile Include="Crypto\PublicKey.cs" />
     <Compile Include="PopulateContacts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadMessagePage.xaml.cs">
+      <DependentUpon>ReadMessagePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ShareKeyPage.xaml.cs">
       <DependentUpon>ShareKeyPage.xaml</DependentUpon>
     </Compile>
@@ -152,6 +155,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="NewMessagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReadMessagePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

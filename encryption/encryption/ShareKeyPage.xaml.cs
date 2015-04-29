@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.Contacts;
+using Windows.UI.Popups;
 
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
@@ -116,7 +117,10 @@ namespace encryption
             contactPicker.DesiredFieldsWithContactFieldType.Add(ContactFieldType.Email);
             contact = await contactPicker.PickContactAsync();
 
-            return;
+            if (contact != null)
+            {
+                contactpicker_textblock.Text = contact.DisplayName;
+            }            
         }
 
         private async void sharebutton_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
@@ -124,13 +128,15 @@ namespace encryption
             // Raw binary key
             byte[] key = await KeyStore.Instance.GetMyPublicKey();
 
-            // Base64 encoded key
-            //string textKey = PGP.ByteKeyToText(key);
-
-            // TODO: email key to contact_email (contact_email might be null)
-            DeliveryManager mgr = new DeliveryManager();
-
-            await mgr.ComposeEmailAsync(contact, "My public key", "", "publickey.pgpkey", key);            
+            if (key != null)
+            {
+                await MailHelper.ComposeEmailAsync(contact, "My public key", "", "publickey.pgpkey", key);
+            }
+            else
+            {
+                MessageDialog msg = new MessageDialog("You have no private key", "Error");
+                await msg.ShowAsync();
+            }
         }
 
         #endregion

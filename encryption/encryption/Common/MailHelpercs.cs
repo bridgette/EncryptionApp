@@ -8,9 +8,9 @@ using Windows.Storage;
 
 namespace encryption.Common
 {
-    public class DeliveryManager
+    public class MailHelper
     {
-        public async Task<bool> ComposeEmailAsync(Windows.ApplicationModel.Contacts.Contact recipient, string subject, string messageBody, string filename, byte[] fileContent)
+        public static async Task<bool> ComposeEmailAsync(Windows.ApplicationModel.Contacts.Contact recipient, string subject, string messageBody, string filename, byte[] fileContent)
         {
             var emailMessage = new Windows.ApplicationModel.Email.EmailMessage();
             emailMessage.Subject = subject;

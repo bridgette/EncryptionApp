@@ -109,7 +109,7 @@ namespace encryption
         {
             PublicKeyFile = (e.Parameter as IStorageItem);
             if (PublicKeyFile != null)
-                key_textbox.Text = PublicKeyFile.Name;
+                filename_box.Text = PublicKeyFile.Name;
 
             this.navigationHelper.OnNavigatedTo(e);
         }
@@ -129,7 +129,7 @@ namespace encryption
                 // Open the file
                 StorageFile sampleFile = (PublicKeyFile as StorageFile); 
                 
-                var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
+                var buffer = await FileIO.ReadBufferAsync(sampleFile);
 
                 DataReader dataReader = Windows.Storage.Streams.DataReader.FromBuffer(buffer);
                 byte[] fileContent = new byte[dataReader.UnconsumedBufferLength]; 
@@ -148,6 +148,7 @@ namespace encryption
             if (contact != null)
             {
                 contact_email = contact.Emails.FirstOrDefault().Address;
+                selectcontact_textblock.Text = contact.DisplayName;
             }
 
             return;

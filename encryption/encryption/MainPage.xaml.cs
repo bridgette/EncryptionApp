@@ -47,8 +47,6 @@ namespace encryption
         }
         public void NavigateToFilePage()
         {
-            //newmessage_textblock.Text = FileEvent.Files[0].Name;
-
             if (FileEvent.Files != null && FileEvent.Files.Count > 0)
             {
                 // Go process key file
@@ -59,12 +57,10 @@ namespace encryption
                 // go process message
                 else if (FileEvent.Files[0].Name.ToLower().EndsWith(".pgp"))
                 {
-                    //this.Frame.Navigate(typeof(GenerateKeyPage), FileEvent.Files[0]);
+                    this.Frame.Navigate(typeof(ReadMessagePage), FileEvent.Files[0]);
                 }
-                //ScenarioFrame.Navigate(this.Scenarios[2].ClassType);
             }
         }
-
 
 
         /// <summary>

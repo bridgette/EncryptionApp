@@ -18,7 +18,7 @@
     		<LineBreak/>
     		<Run/>
         </TextBlock>
-        <TextBlock x:Name="getkey_textblock" HorizontalAlignment="Left" Margin="3.333,421,0,0" TextWrapping="Wrap" Text="Get Key" VerticalAlignment="Top" FontSize="30" Tapped="getkey_ontap" FontWeight="ExtraLight" Height="47" Width="209" Grid.Column="1"/>
+        <TextBlock x:Name="getkey_textblock" HorizontalAlignment="Left" Margin="3.333,421,0,0" TextWrapping="Wrap" Text="." VerticalAlignment="Top" FontSize="30" Tapped="getkey_ontap" FontWeight="ExtraLight" Height="47" Width="209" Grid.Column="1"/>
         <TextBlock x:Name="createkey_textblock" HorizontalAlignment="Left" Margin="3.333,473,0,0" TextWrapping="Wrap" Text="Create Key" VerticalAlignment="Top" FontSize="30" Tapped="createkey_ontap" FontWeight="ExtraLight" Height="50" Width="209" Grid.Column="1"/>
         <TextBlock x:Name="sharekey_textblock" HorizontalAlignment="Left" Margin="3.333,528,0,0" TextWrapping="Wrap" Text="Share Key" VerticalAlignment="Top" FontSize="30" Tapped="sharekey_ontap" FontWeight="ExtraLight" Height="55" Width="209" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="49,0,0,492" TextWrapping="Wrap" Text="Our AppName" FontSize="50" Grid.ColumnSpan="2" Width="341" FontFamily="Microsoft MHei" FontStretch="SemiCondensed" Height="69" VerticalAlignment="Bottom" FontWeight="Light"/>

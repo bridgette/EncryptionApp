@@ -1,16 +1,15 @@
 ﻿using encryption.Common;
 using encryption.Crypto;
-using Org.BouncyCastle.Bcpg.OpenPgp;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.Graphics.Display;
-using Windows.UI.Popups;
-using Windows.UI.ViewManagement;
+using Windows.Storage;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -19,19 +18,20 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
 namespace encryption
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class GenerateKeyPage : Page
+    public sealed partial class ReadMessagePage : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
-        public GenerateKeyPage()
+        IStorageItem EncryptedFile;
+        public ReadMessagePage()
         {
             this.InitializeComponent();
 
@@ -101,6 +101,8 @@ namespace encryption
         /// handlers that cannot cancel the navigation request.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            EncryptedFile = (e.Parameter as IStorageItem);
+
             this.navigationHelper.OnNavigatedTo(e);
         }
 
@@ -108,23 +110,37 @@ namespace encryption
         {
             this.navigationHelper.OnNavigatedFrom(e);
         }
-
         #endregion
 
-        private async void createkeybutton_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        private async void decrypt_button_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            // TODO: Add event handler implementation here.
+            string password = password_box.Text;
+            if (!string.IsNullOrEmpty(password) || EncryptedFile != null)
+            {
+                // Open the file
+                StorageFile sampleFile = (EncryptedFile as StorageFile);
 
-            PgpPublicKeyRing publicKey;
-            PgpSecretKeyRing privateKey;
+                var buffer = await FileIO.ReadBufferAsync(sampleFile);
 
-            PGP.GenerateKeyPair(userid_box.Text, password_box.Text, out publicKey, out privateKey);
+                DataReader dataReader = Windows.Storage.Streams.DataReader.FromBuffer(buffer);
+                byte[] fileContent = new byte[dataReader.UnconsumedBufferLength];
+                dataReader.ReadBytes(fileContent);          
 
-            KeyStore.Instance.StoreKeyPair(privateKey, publicKey);
+                // Get private key
+                byte[] privateKey = await KeyStore.Instance.GetMyPrivateKey();
+                if (privateKey != null)
+                {
+                    string errors;
+                    byte[] result = PGP.Decrypt(fileContent, privateKey, password, out errors);
 
-            MessageDialog msg = new MessageDialog("You are good to go! :-)", "Success");
-            await msg.ShowAsync();
+                    if (result != null)
+                        message_box.Text = Encoding.UTF8.GetString(result, 0, result.Length);
+                    else
+                        message_box.Text = "ERROR: " + errors;
+                }
+                else
+                    message_box.Text = "ERROR: you have no private key!";
+            }
         }
-
     }
 }

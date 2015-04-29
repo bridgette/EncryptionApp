@@ -47,20 +47,26 @@ namespace encryption.Crypto
 
         public async Task<byte[]> GetMyPrivateKey()
         {
-            KeyPair keyPair = await keysdb.GetKeyPair();
-            if (keyPair != null)
-                return keyPair.PrivateKeyBlob;
-            else
-                return null;
+            if (_myPrivateKey == null)
+            { 
+                KeyPair keyPair = await keysdb.GetKeyPair();
+                if (keyPair != null)
+                    _myPrivateKey = keyPair.PrivateKeyBlob;
+            }
+
+            return _myPrivateKey;
         }
 
         public async Task<byte[]> GetMyPublicKey()
         {
-            KeyPair keyPair = await keysdb.GetKeyPair();
-            if (keyPair != null)
-                return keyPair.PublicKeyBlob;
-            else
-                return null;
+            if (_myPublicKey == null)
+            {
+                KeyPair keyPair = await keysdb.GetKeyPair();
+                if (keyPair != null)
+                    _myPublicKey = keyPair.PublicKeyBlob;
+            }
+
+            return _myPublicKey;
         }
 
         public async Task<bool> AddPublicKey(string email, byte[] key)
@@ -84,6 +90,7 @@ namespace encryption.Crypto
         }
 
         private KeysDB keysdb;
+        private byte[] _myPrivateKey, _myPublicKey;
         private bool initialized = false;
     }
 }

@@ -31,23 +31,6 @@ namespace encryption.Crypto
 
             return Encoding.UTF8.GetString(output, 0, output.Length);
         }
-        public static string PublicKeyToText(PgpPublicKeyRing publicKey)
-        {
-
-
-            byte[] output;
-            using(MemoryStream stream = new MemoryStream())
-            {
-                ArmoredOutputStream armor = new ArmoredOutputStream(stream);
-                publicKey.Encode(armor);
-                armor.Flush();
-                stream.Flush();
-            
-                output = stream.ToArray();
-            }
-
-            return Encoding.UTF8.GetString(output, 0, output.Length);
-        }
 
         public static void GenerateKeyPair(string userid, string password, out PgpPublicKeyRing pkr, out PgpSecretKeyRing skr)
         {

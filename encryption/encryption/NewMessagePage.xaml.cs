@@ -156,15 +156,20 @@ namespace encryption
             if (contact != null)
             {
                 string email = contact.Emails.FirstOrDefault().Address;
+                explaination_textblock.Text = contact.DisplayName;
+
                 if (email != null)
                 {
                     publicKey = await KeyStore.Instance.GetPublicKey(email);
-                    key_found_textblock.Text = "Key found";
+                }
+
+                if (publicKey != null)
+                {
+                    key_found_textblock.Text = "Key for contact found";
                 }
                 else
-                {
-                    publicKey = null;
-                    key_found_textblock.Text = "Key not found :-(";
+                {                    
+                    key_found_textblock.Text = "Contact has no key :-(";
                 }
             }
 
@@ -186,9 +191,8 @@ namespace encryption
             if (publicKey != null)
             {
                 byte[] dataToSend = PGP.Encrypt(message, publicKey, true, true);
-
-                DeliveryManager mgr = new DeliveryManager();
-                await mgr.ComposeEmailAsync(contact, "Encoded message", string.Empty, "message.pgp", dataToSend);
+               
+                await MailHelper.ComposeEmailAsync(contact, "Encoded message", string.Empty, "message.pgp", dataToSend);
             }
         }
 

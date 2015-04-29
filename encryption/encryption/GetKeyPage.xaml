@@ -28,10 +28,11 @@
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-        	<TextBox x:Name="key_textbox" HorizontalAlignment="Left" Margin="50,213,0,0" TextWrapping="Wrap" Text="Copy their key here" VerticalAlignment="Top" Height="220" Width="268" GotFocus="copykeytextbox_gotfocus" LostFocus="copykeytextbox_lostfocus"/>
-        	<TextBlock x:Name="whichcontact_textblock" HorizontalAlignment="Left" Margin="84,23,0,0" TextWrapping="Wrap" Text="Which contact is this key for?" VerticalAlignment="Top" FontSize="14"/>
+            <TextBlock x:Name="whichcontact_textblock" HorizontalAlignment="Left" Margin="84,23,0,0" TextWrapping="Wrap" Text="Which contact is this key for?" VerticalAlignment="Top" FontSize="14"/>
         	<TextBlock x:Name="selectcontact_textblock" HorizontalAlignment="Left" Margin="84,77,0,0" TextWrapping="Wrap" Text="Select contact" VerticalAlignment="Top" Height="36" Width="153" FontSize="25" Tapped="selectcontact_ontap"/>
         	<Button x:Name="savekey_button" Content="Save Key" HorizontalAlignment="Left" Margin="209,437,0,0" VerticalAlignment="Top" Tapped="savekey_ontap"/>
+            <TextBlock HorizontalAlignment="Left" Margin="34,181,0,0" TextWrapping="Wrap" Text="File: " VerticalAlignment="Top"/>
+            <TextBlock x:Name="filename_box" HorizontalAlignment="Left" Margin="34,199,0,0" TextWrapping="Wrap" FontSize="20" Text="file:" VerticalAlignment="Top" RenderTransformOrigin="0.647,-0.072"/>
 
         </Grid>
     </Grid>
