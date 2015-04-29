@@ -136,6 +136,8 @@ namespace encryption
                 dataReader.ReadBytes(fileContent);                 
                 
                 await KeyStore.Instance.AddPublicKey(contact_email, fileContent );
+
+                this.Frame.Navigate(typeof(MainPage));
             }
         }
        

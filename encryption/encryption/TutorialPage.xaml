@@ -37,7 +37,7 @@
         		<LineBreak/>
         		<Run/>
         		<LineBreak/>
-        		<Run Text="Think of your public key as a lock that only you can open."/>
+        		<Run Text="Think of your public key as a padlock that only you can open."/>
         	</TextBlock>
 
         </Grid>

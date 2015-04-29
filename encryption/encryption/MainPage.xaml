@@ -18,6 +18,7 @@
     		<LineBreak/>
     		<Run/>
         </TextBlock>
+<<<<<<< HEAD
         <TextBlock x:Name="sharekey_textblock" HorizontalAlignment="Left" Margin="0.333,385,0,0" TextWrapping="Wrap" Text="Share My Public Key" VerticalAlignment="Top" FontSize="30" Tapped="sharekey_ontap" FontWeight="ExtraLight" Height="55" Width="264" FontFamily="Segoe UI Light" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="0.333,0,0,545" TextWrapping="Wrap" FontSize="50" Width="255" FontFamily="Microsoft MHei" FontStretch="SemiCondensed" Height="69" VerticalAlignment="Bottom" FontWeight="Light" Grid.Column="1">
         	<Run FontWeight="ExtraBold" Text="Encrypt"/>
@@ -26,6 +27,11 @@
         <Image Margin="26,45,9.667,559" Source="Assets/lock_white.png" Stretch="Fill" Height="35"/>
         <Image Margin="26,385,9.667,220" Source="Assets/key_white.png" Stretch="Fill" RenderTransformOrigin="-0.322,2.155" Height="35"/>
         <Image Margin="26,260,9.667,344" Source="Assets/envelope_white.png" Stretch="Fill" RenderTransformOrigin="0.031,0.083"/>
+=======
+        <TextBlock x:Name="getkey_textblock" HorizontalAlignment="Left" Margin="3.333,473,0,0" TextWrapping="Wrap" Text="." VerticalAlignment="Top" FontSize="30" Tapped="getkey_ontap" FontWeight="ExtraLight" Height="50" Width="209" Grid.Column="1"/>
+        <TextBlock x:Name="sharekey_textblock" HorizontalAlignment="Left" Margin="3.333,528,0,0" TextWrapping="Wrap" Text="Share Key" VerticalAlignment="Top" FontSize="30" Tapped="sharekey_ontap" FontWeight="ExtraLight" Height="55" Width="209" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="49,0,0,492" TextWrapping="Wrap" Text="Our AppName" FontSize="50" Grid.ColumnSpan="2" Width="341" FontFamily="Microsoft MHei" FontStretch="SemiCondensed" Height="69" VerticalAlignment="Bottom" FontWeight="Light"/>
+>>>>>>> 3a419010b4def05df2b7986bca80be9f853d0169
 
     </Grid>
 </Page>

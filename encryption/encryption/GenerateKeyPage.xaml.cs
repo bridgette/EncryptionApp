@@ -111,7 +111,7 @@ namespace encryption
 
         #endregion
 
-        private async void createkeybutton_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        private void createkeybutton_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
 
             PgpPublicKeyRing publicKey;
@@ -122,10 +122,7 @@ namespace encryption
             KeyStore.Instance.StoreKeyPair(privateKey, publicKey);
 
             // todo: some key-generating loading animation
-
-            MessageDialog msg = new MessageDialog("You are good to go! :-)", "Success");
-            await msg.ShowAsync();
-			
+		
 			// navigate to next tutorial slide
 			this.Frame.Navigate(typeof(TutorialPage));
         }
