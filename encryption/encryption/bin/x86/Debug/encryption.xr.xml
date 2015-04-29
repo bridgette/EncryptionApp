@@ -5,6 +5,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
+      <RootProperty Name="BorderBrush" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -66,19 +67,24 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="RenderTransformOrigin" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="CharacterSpacing" />
       <RootProperty Name="FontStretch" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
+      <RootProperty Name="FontWeight" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="encryption.GenerateKeyPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Margin" />
-      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="encryption.GetKeyPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
@@ -87,6 +93,9 @@
     <RootType FullName="encryption.MainPage" />
     <RootType FullName="encryption.NewMessagePage" />
     <RootType FullName="encryption.ReadMessagePage" />
+    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
+      <RootProperty Name="Color" />
+    </RootType>
     <RootType FullName="encryption.ShareKeyPage" />
     <RootType FullName="encryption.TutorialPage" />
     <RootType FullName="encryption.TutorialPage2" />

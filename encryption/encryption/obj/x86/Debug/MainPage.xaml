@@ -13,14 +13,19 @@
             <ColumnDefinition Width="9*"/>
             <ColumnDefinition Width="41*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:ConnectionId='2' x:Name="newmessage_textblock" HorizontalAlignment="Left" Margin="3.333,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40"                           FontWeight="ExtraLight" Height="55" Width="279" Grid.Column="1" FontFamily="Segoe UI Light">
+        <TextBlock x:ConnectionId='2' x:Name="newmessage_textblock" HorizontalAlignment="Left" Margin="0.333,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40"                           FontWeight="ExtraLight" Height="55" Width="279" Grid.Column="1" FontFamily="Segoe UI Light">
     		<Run Text="Send Message"/>
     		<LineBreak/>
     		<Run/>
         </TextBlock>
-        <TextBlock x:ConnectionId='3' x:Name="getkey_textblock" HorizontalAlignment="Left" Margin="3.333,473,0,0" TextWrapping="Wrap" Text="Save Friend's Key" VerticalAlignment="Top" FontSize="30"                       FontWeight="ExtraLight" Height="50" Width="232" Grid.Column="1" FontFamily="Segoe UI Light"/>
-        <TextBlock x:ConnectionId='4' x:Name="sharekey_textblock" HorizontalAlignment="Left" Margin="3.333,528,0,0" TextWrapping="Wrap" Text="Share My Key" VerticalAlignment="Top" FontSize="30"                         FontWeight="ExtraLight" Height="55" Width="209" Grid.Column="1" FontFamily="Segoe UI Light"/>
-        <TextBlock HorizontalAlignment="Left" Margin="0.333,0,0,545" TextWrapping="Wrap" Text="EncryptMe" FontSize="50" Width="235" FontFamily="Microsoft MHei" FontStretch="SemiCondensed" Height="69" VerticalAlignment="Bottom" FontWeight="Light" Grid.Column="1"/>
+        <TextBlock x:ConnectionId='3' x:Name="sharekey_textblock" HorizontalAlignment="Left" Margin="0.333,385,0,0" TextWrapping="Wrap" Text="Share My Public Key" VerticalAlignment="Top" FontSize="30"                         FontWeight="ExtraLight" Height="55" Width="301" FontFamily="Segoe UI Light" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0.333,0,0,545" TextWrapping="Wrap" FontSize="50" Width="255" FontFamily="Microsoft MHei" FontStretch="SemiCondensed" Height="69" VerticalAlignment="Bottom" FontWeight="Light" Grid.Column="1">
+        	<Run FontWeight="ExtraBold" Text="Encrypt"/>
+        	<Run FontWeight="ExtraLight" Text="Me"/>
+        </TextBlock>
+        <Image Margin="26,45,9.667,559" Source="Assets/lock_white.png" Stretch="Fill" Height="35"/>
+        <Image Margin="26,385,9.667,220" Source="Assets/key_white.png" Stretch="Fill" RenderTransformOrigin="-0.322,2.155" Height="35"/>
+        <Image Margin="26,260,9.667,344" Source="Assets/envelope_white.png" Stretch="Fill" RenderTransformOrigin="0.031,0.083"/>
 
     </Grid>
 </Page>

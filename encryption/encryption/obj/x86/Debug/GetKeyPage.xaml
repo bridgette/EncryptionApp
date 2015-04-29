@@ -5,8 +5,7 @@
     xmlns:local="using:encryption"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d" Background="#FF462626">
 
     <Grid x:Name="LayoutRoot">
 
@@ -22,17 +21,17 @@
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="get key" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
-        </StackPanel>
+        <StackPanel Grid.Row="0" Margin="19,0,0,0"/>
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-            <TextBlock x:Name="whichcontact_textblock" HorizontalAlignment="Left" Margin="84,23,0,0" TextWrapping="Wrap" Text="Which contact is this key for?" VerticalAlignment="Top" FontSize="14"/>
-        	<TextBlock x:ConnectionId='1' x:Name="selectcontact_textblock" HorizontalAlignment="Left" Margin="84,77,0,0" TextWrapping="Wrap" Text="Select contact" VerticalAlignment="Top" Height="36" Width="153" FontSize="25"                             />
-        	<Button x:ConnectionId='2' x:Name="savekey_button" Content="Save Key" HorizontalAlignment="Left" Margin="209,437,0,0" VerticalAlignment="Top"                       />
-            <TextBlock HorizontalAlignment="Left" Margin="34,181,0,0" TextWrapping="Wrap" Text="File: " VerticalAlignment="Top"/>
-            <TextBlock x:Name="filename_box" HorizontalAlignment="Left" Margin="34,199,0,0" TextWrapping="Wrap" FontSize="20" Text="file:" VerticalAlignment="Top" RenderTransformOrigin="0.647,-0.072"/>
+            <TextBlock x:Name="whichcontact_textblock" HorizontalAlignment="Left" Margin="23,300,0,0" TextWrapping="Wrap" Text="Whose key is it?" VerticalAlignment="Top" FontSize="25" FontFamily="Segoe UI Light"/>
+        	<TextBlock x:ConnectionId='1' x:Name="selectcontact_textblock" HorizontalAlignment="Left" Margin="65,345,0,0" TextWrapping="Wrap" Text="Select contact" VerticalAlignment="Top" Height="36" Width="188" FontSize="25"                             />
+        	<Button x:ConnectionId='2' x:Name="savekey_button" Content="Save Key" HorizontalAlignment="Left" Margin="233,465,0,0" VerticalAlignment="Top"                       />
+            <TextBlock HorizontalAlignment="Left" Margin="23,83,0,0" TextWrapping="Wrap" Text="Awesome! You got someone's public key! " VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="25"/>
+            <TextBlock x:Name="filename_box" HorizontalAlignment="Left" Margin="65,166,0,0" TextWrapping="Wrap" FontSize="20" Text="file:" VerticalAlignment="Top" RenderTransformOrigin="0.647,-0.072" Width="263"/>
+            <Image Margin="23,164,312,441" Source="Assets/key_white.png" Stretch="Fill"/>
+            <Image Margin="23,345,312,259" Source="Assets/woman_white.png" Stretch="Fill"/>
 
         </Grid>
     </Grid>

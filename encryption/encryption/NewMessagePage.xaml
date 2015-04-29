@@ -8,10 +8,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Loaded="grid_loaded">
-        <TextBox x:Name="message_textbox" HorizontalAlignment="Left" Margin="10,167,0,0" TextWrapping="Wrap" Text="Enter message here" VerticalAlignment="Top" Height="292" Width="305" GotFocus="messagetextbox_gotfocus" Foreground="#FF626262" LostFocus="messagetextbox_lostfocus"/>
-        <Button Content="Send" HorizontalAlignment="Left" Margin="320,392,0,0" VerticalAlignment="Top" Height="77" Width="70" BorderThickness="1" Padding="0" MinHeight="30" MinWidth="50" Tapped="Button_Tapped"  />
-        <TextBlock x:Name="keyfound_textblock" HorizontalAlignment="Left" Margin="20,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13" Text="-"/>
+    <Grid Loaded="grid_loaded" Background="#FF420000">
+        <TextBox x:Name="message_textbox" HorizontalAlignment="Left" Margin="0,167,0,0" TextWrapping="Wrap" Text="Enter message here" VerticalAlignment="Top" Height="292" Width="400" GotFocus="messagetextbox_gotfocus" Foreground="#FF626262" LostFocus="messagetextbox_lostfocus"/>
+        <Button Content="Send" HorizontalAlignment="Left" Margin="263,563,0,0" VerticalAlignment="Top" Height="77" Width="127" BorderThickness="1" Padding="0" MinHeight="30" MinWidth="50" Tapped="Button_Tapped"  />
+        <TextBlock x:Name="keyfound_textblock" HorizontalAlignment="Left" Margin="20,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13" Text="" Width="339" Height="34"/>
         <TextBlock x:Name="explaination_textblock" HorizontalAlignment="Left" Margin="20,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontWeight="Light" Tapped="pickcontact_tapped">
     		<Run Text="Pick a contact"/>
         </TextBlock>

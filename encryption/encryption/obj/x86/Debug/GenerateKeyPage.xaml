@@ -30,12 +30,12 @@
             <TextBox x:Name="userid_box" HorizontalAlignment="Left" Margin="36,261,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="301"/>
             <TextBlock HorizontalAlignment="Left" Margin="36,243,0,0" TextWrapping="Wrap" Text="Name or Email" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="36,332,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
-            <TextBlock x:Name="gettingstartedtextblock" HorizontalAlignment="Left" Margin="36,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" FontFamily="Segoe UI Light" FontWeight="ExtraLight" Height="121" Width="266">
+            <TextBlock x:Name="gettingstartedtextblock" HorizontalAlignment="Left" Margin="36,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" FontFamily="Segoe UI Light" FontWeight="ExtraLight" Height="173" Width="266">
             	<Run Text="Let's get started! "/>
             	<LineBreak/>
             	<Run/>
             	<LineBreak/>
-            	<Run Text="Enter your name and a password:"/>
+            	<Run Text="Enter name and a password for a new private key:"/>
             </TextBlock>
             <TextBlock x:Name="holdthephone" HorizontalAlignment="Left" Margin="46,482,0,0" TextWrapping="Wrap" Text="Hold the phone, we're generating your keys for you..." VerticalAlignment="Top" Visibility="Collapsed"/>
 

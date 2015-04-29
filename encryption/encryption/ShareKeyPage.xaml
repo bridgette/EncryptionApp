@@ -5,8 +5,10 @@
     xmlns:local="using:encryption"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d" BorderBrush="#FF8C0000">
+	<Page.Background>
+		<SolidColorBrush Color="#FF540000"/>
+	</Page.Background>
 
     <Grid x:Name="LayoutRoot">
 
@@ -22,19 +24,18 @@
         </Grid.RowDefinitions>
 
         <!-- Title Panel -->
-        <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="share key" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
-        </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-        	<TextBlock x:Name="explaination_textblock" HorizontalAlignment="Left" Margin="15,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
-        		<Run Text="Pick a contact to share your public key wth:"/>
+        	<TextBlock x:Name="explaination_textblock" HorizontalAlignment="Left" Margin="28,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" Height="69" Width="280" FontFamily="Segoe UI Light">
+        		<Run Text="Share your public key to anyone via email:"/>
         		<LineBreak/>
         		<Run/>
         	</TextBlock>
-        	<TextBlock x:Name="contactpicker_textblock" HorizontalAlignment="Left" Margin="97,103,0,0" TextWrapping="Wrap" Text="Pick a contact" VerticalAlignment="Top" Tapped="contacpicker_ontap" FontSize="22"/>
-        	<Button x:Name="share_button" Content="Share!" HorizontalAlignment="Left" Margin="137,331,0,0" VerticalAlignment="Top" Tapped="sharebutton_ontap"/>
+        	<Button x:Name="share_button" Content="Share!" HorizontalAlignment="Left" Margin="231,309,0,0" VerticalAlignment="Top" Tapped="sharebutton_ontap" Height="82" Width="111" MinWidth="50"/>
+        	<Image Margin="28,24,270,543" Source="Assets/lock_white.png" Stretch="Fill"/>
+        	<Image Margin="110,24,188,543" Source="Assets/woman_white.png" Stretch="Fill"/>
+        	<TextBlock x:Name="contactpicker_textblock" HorizontalAlignment="Left" Margin="28,333,0,0" TextWrapping="Wrap" Text="Pick a Contact" VerticalAlignment="Top" Tapped="contacpicker_ontap" FontSize="25" FontFamily="Segoe UI Light" Width="189"/>
 
         </Grid>
     </Grid>

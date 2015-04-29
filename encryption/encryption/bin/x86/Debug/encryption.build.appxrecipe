@@ -25,12 +25,29 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\SQLite.WP81\3.8.9\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\envelope_white.png">
+      <PackagePath>Assets\envelope_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\key_white.png">
+      <PackagePath>Assets\key_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\lock_white.png">
+      <PackagePath>Assets\lock_white.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\SplashScreen.scale-140.png">
+      <PackagePath>Assets\SplashScreen.scale-140.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\SplashScreen.scale-240.png">
@@ -48,6 +65,9 @@
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\Assets\woman_white.png">
+      <PackagePath>Assets\woman_white.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>

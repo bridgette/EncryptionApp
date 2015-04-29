@@ -165,11 +165,11 @@ namespace encryption
 
                 if (publicKey != null)
                 {
-                    key_found_textblock.Text = "Key for contact found";
+                    key_found_textblock.Text = "Key for contact found!";
                 }
                 else
                 {                    
-                    key_found_textblock.Text = "Contact has no key :-(";
+                    key_found_textblock.Text = "You don't have their public key- tell them to send you a .pgpkey file, and we'll do the rest!";
                 }
             }
 
