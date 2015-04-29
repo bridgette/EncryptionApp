@@ -26,7 +26,7 @@
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
             <TextBlock x:Name="whichcontact_textblock" HorizontalAlignment="Left" Margin="23,300,0,0" TextWrapping="Wrap" Text="Whose key is it?" VerticalAlignment="Top" FontSize="25" FontFamily="Segoe UI Light"/>
-        	<TextBlock x:Name="selectcontact_textblock" HorizontalAlignment="Left" Margin="65,345,0,0" TextWrapping="Wrap" Text="Select contact" VerticalAlignment="Top" Height="36" Width="188" FontSize="25" Tapped="selectcontact_ontap"/>
+        	<TextBlock x:Name="selectcontact_textblock" HorizontalAlignment="Left" Margin="65,345,0,0" TextWrapping="Wrap" Text="Select contact" VerticalAlignment="Top" Height="99" Width="263" FontSize="25" Tapped="selectcontact_ontap"/>
         	<Button x:Name="savekey_button" Content="Save Key" HorizontalAlignment="Left" Margin="233,465,0,0" VerticalAlignment="Top" Tapped="savekey_ontap"/>
             <TextBlock HorizontalAlignment="Left" Margin="23,83,0,0" TextWrapping="Wrap" Text="Awesome! You got someone's public key! " VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="25"/>
             <TextBlock x:Name="filename_box" HorizontalAlignment="Left" Margin="65,166,0,0" TextWrapping="Wrap" FontSize="20" Text="file:" VerticalAlignment="Top" RenderTransformOrigin="0.647,-0.072" Width="263"/>

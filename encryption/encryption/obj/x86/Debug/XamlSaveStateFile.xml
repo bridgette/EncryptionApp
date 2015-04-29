@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\breiche\desktop\encryptionapp\encryption\encryption\obj\x86\debug\intermediatexaml\encryption.exe" HashGuid="3d1d7c85-3538-483c-3192-f030c7f7094c" />
+    <LocalAssembly PathName="c:\users\breiche\desktop\encryptionapp\encryption\encryption\obj\x86\debug\intermediatexaml\encryption.exe" HashGuid="4ce812d9-4d69-4b5a-0592-1ede7935d87e" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
     <ReferenceAssembly PathName="c:\users\breiche\desktop\encryptionapp\encryption\packages\portable.bouncycastle.1.7.0.2\lib\portable-net4+sl5+wp8+win8+wpa81+monotouch10+monoandroid10+xamarinmac20+xamarinios10\crypto.dll" HashGuid="3e7563f8-e7c7-838e-4d9f-b4d1f2eb2685" />
   </ReferenceAssemblyList>
