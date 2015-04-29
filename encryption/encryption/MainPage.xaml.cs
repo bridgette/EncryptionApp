@@ -43,6 +43,22 @@ namespace encryption
 
         }
 
+        private static string FIRST_RUN_LOOKUP = "FIRST_RUN";
+        public bool IsFirstRun()
+        {
+            var localsettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            var has_been_run = localsettings.Values[FIRST_RUN_LOOKUP];
+            if (has_been_run == null)
+            {
+                localsettings.Values[FIRST_RUN_LOOKUP] = "42";
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void NavigateToFilePage()
         {
             if (FileEvent.Files != null && FileEvent.Files.Count > 0)
@@ -92,14 +108,15 @@ namespace encryption
             this.Frame.Navigate(typeof(NewMessagePage));
         }
 
-        
-        private async void mainpage_hasframe(object sender, Windows.UI.Xaml.SizeChangedEventArgs e)
-        {
-            byte[] privateKey = await KeyStore.Instance.GetMyPrivateKey();
 
-            if (privateKey == null)
+        bool ranOnceThisSession = false;
+        private void mainpage_hasframe(object sender, Windows.UI.Xaml.SizeChangedEventArgs e)
+        {
+            bool isFirstRun = IsFirstRun();
+            if (isFirstRun && !ranOnceThisSession)
             {
                 this.Frame.Navigate(typeof(GenerateKeyPage));
+                ranOnceThisSession = true;
             }
         }
     }
