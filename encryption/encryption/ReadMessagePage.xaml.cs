@@ -139,7 +139,12 @@ namespace encryption
                         message_box.Text = "ERROR: " + errors;
                 }
                 else
+                {
                     message_box.Text = "ERROR: you have no private key!";
+                }
+                message_box.Visibility = Windows.UI.Xaml.Visibility.Visible;
+
+
             }
         }
     }

@@ -178,3 +178,4 @@ C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\x86\Debug\quali
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\obj\x86\Debug\encryption.csprojResolveAssemblyReference.cache
