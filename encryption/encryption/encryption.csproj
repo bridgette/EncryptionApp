@@ -112,6 +112,7 @@
     <Compile Include="Crypto\PGP.cs" />
     <Compile Include="Crypto\KeyStore.cs" />
     <Compile Include="Crypto\PublicKey.cs" />
+    <Compile Include="PopulateContacts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShareKeyPage.xaml.cs">
       <DependentUpon>ShareKeyPage.xaml</DependentUpon>

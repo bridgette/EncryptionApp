@@ -17,6 +17,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.ApplicationModel.Contacts;
+
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -109,15 +111,25 @@ namespace encryption
         }
         #endregion
 
+        string contact_email;
         private async void savekey_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
 
-            await KeyStore.Instance.AddPublicKey("conact@email.org", Encoding.UTF8.GetBytes(key_textbox.Text));
+            await KeyStore.Instance.AddPublicKey(contact_email, Encoding.UTF8.GetBytes(key_textbox.Text));
         }
 
-        private void selectcontact_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        private async void selectcontact_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            // TODO: Add event handler implementation here.
+            var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
+            contactPicker.DesiredFieldsWithContactFieldType.Add(ContactFieldType.Email);
+            Contact contact = await contactPicker.PickContactAsync();
+
+            if (contact != null)
+            {
+                contact_email = contact.Emails.First().Address;
+            }
+
+            return;
 
         }
 

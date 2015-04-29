@@ -30,6 +30,8 @@ namespace encryption
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             KeyStore.Instance.Init();
+            PopulateContacts.CreateContactStore();
+
         }
 
         /// <summary>

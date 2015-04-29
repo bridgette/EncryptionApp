@@ -17,8 +17,11 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
+using Windows.ApplicationModel.Contacts;
+using Windows.Storage.Streams;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace encryption
 {
@@ -142,12 +145,22 @@ namespace encryption
             }
         }
 
-        private void pickcontact_tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        private async void pickcontact_tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            key_found_textblock.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            key_found_textblock.Text = "Found key from database......";
+
+            var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
+            contactPicker.DesiredFieldsWithContactFieldType.Add(ContactFieldType.Email);
+            Contact contact = await contactPicker.PickContactAsync();
+
+            if (contact != null)
+            {
+                string email = contact.Emails.First().Address;
+                // todo: here is the email!
+            }
+
             return;
         }
+
 
         /// <summary>
         /// </summary>
