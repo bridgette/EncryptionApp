@@ -63,6 +63,7 @@ namespace encryption.Crypto
         public static byte[] Decrypt(byte[] inputData, byte[] privateKey, string passCode, out string debugMessage)
         {
             MemoryStream keyIn = new MemoryStream(privateKey);
+            keyIn.Position = 0;
 
             debugMessage = string.Empty;
 
@@ -160,7 +161,7 @@ namespace encryption.Crypto
 
         public static byte[] Encrypt(byte[] inputData, byte[] publickey, bool withIntegrityCheck, bool armor)
         {
-            MemoryStream keyStream = new MemoryStream(publickey);
+            MemoryStream keyStream = new MemoryStream(publickey);            
             PgpPublicKey passPhrase = PGP.ReadPublicKey(keyStream);
 
             byte[] processedData = Compress(inputData, PgpLiteralData.Console, CompressionAlgorithmTag.Uncompressed);
@@ -183,8 +184,10 @@ namespace encryption.Crypto
             if (armor)
             {
                 output.Flush(); //output.Close();
-                encOut.Dispose();
+                output.Dispose();
             }
+
+            bOut.Flush();
 
             return bOut.ToArray();
         }
@@ -238,6 +241,7 @@ namespace encryption.Crypto
 
             throw new ArgumentException("Can't find encryption key in key ring.");
         }
+
 
         private static PgpPrivateKey FindSecretKey(PgpSecretKeyRingBundle pgpSec, long keyId, char[] pass)
         {

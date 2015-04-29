@@ -109,17 +109,12 @@ namespace encryption
             this.navigationHelper.OnNavigatedFrom(e);
         }
 
-        string contact_email;
+        Contact contact;
         private async void contacpicker_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
             contactPicker.DesiredFieldsWithContactFieldType.Add(ContactFieldType.Email);
-            Contact contact = await contactPicker.PickContactAsync();
-
-            if (contact != null)
-            {
-                contact_email = contact.Emails.First().Address;
-            }
+            contact = await contactPicker.PickContactAsync();
 
             return;
         }
@@ -130,10 +125,12 @@ namespace encryption
             byte[] key = await KeyStore.Instance.GetMyPublicKey();
 
             // Base64 encoded key
-            string textKey = PGP.ByteKeyToText(key);
+            //string textKey = PGP.ByteKeyToText(key);
 
             // TODO: email key to contact_email (contact_email might be null)
+            DeliveryManager mgr = new DeliveryManager();
 
+            await mgr.ComposeEmailAsync(contact, "My public key", "", "publickey.pgpkey", key);            
         }
 
         #endregion

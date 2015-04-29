@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.Contacts;
+using Org.BouncyCastle.Bcpg;
 
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
@@ -115,9 +116,31 @@ namespace encryption
         private async void savekey_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
 
-            await KeyStore.Instance.AddPublicKey(contact_email, Encoding.UTF8.GetBytes(key_textbox.Text));
+            if (contact_email != null)
+            {
+                //byte[] hexkey = Encoding.UTF8.GetBytes(key_textbox.Text);
+
+                await KeyStore.Instance.AddPublicKey(contact_email, HexstringToBytes(key_textbox.Text.Trim()) );
+            }
         }
 
+        private byte[] HexstringToBytes(string str)
+        {
+            int len = str.Length;
+
+            if ((len % 2) != 0)
+                throw new Exception("Invalid hex string");
+
+            byte[] buffer = new byte[len / 2];
+
+            for (int i = 0; i < len / 2; i++)
+            {
+                buffer[i] = Convert.ToByte(str.Substring(i * 2, 2), 16);
+            }
+
+            return buffer;
+        }
+        
         private async void selectcontact_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
@@ -126,7 +149,7 @@ namespace encryption
 
             if (contact != null)
             {
-                contact_email = contact.Emails.First().Address;
+                contact_email = contact.Emails.FirstOrDefault().Address;
             }
 
             return;

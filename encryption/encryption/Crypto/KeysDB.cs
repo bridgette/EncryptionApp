@@ -29,7 +29,18 @@ namespace encryption.Crypto
 
         public async Task<int> AddPublicKey(PublicKey key)
         {
-            return await connection.InsertAsync(key);
+            var existingKey = await connection.Table<PublicKey>().Where(x => x.Email.Equals(key.Email)).FirstOrDefaultAsync();
+            
+            if (existingKey != null)
+            {
+                existingKey.KeyBlob = key.KeyBlob;                
+
+                return await connection.UpdateAsync(existingKey);
+            }
+            else
+            {                
+                return await connection.InsertAsync(key);
+            }
         }
 
         public async Task<PublicKey> GetPublicKey(string email)

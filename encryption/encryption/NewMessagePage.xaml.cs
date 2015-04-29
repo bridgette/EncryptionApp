@@ -145,22 +145,33 @@ namespace encryption
             }
         }
 
+        Contact contact;
+        byte[] publicKey;
+
         private async void pickcontact_tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
 
             var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
             contactPicker.DesiredFieldsWithContactFieldType.Add(ContactFieldType.Email);
-            Contact contact = await contactPicker.PickContactAsync();
+            contact = await contactPicker.PickContactAsync();
 
             if (contact != null)
             {
-                string email = contact.Emails.First().Address;
-                // todo: here is the email!
+                string email = contact.Emails.FirstOrDefault().Address;
+                if (email != null)
+                {
+                    publicKey = await KeyStore.Instance.GetPublicKey(email);
+                    key_found_textblock.Text = "Key found";
+                }
+                else
+                {
+                    publicKey = null;
+                    key_found_textblock.Text = "Key not found :-(";
+                }
             }
 
             return;
         }
-
 
         /// <summary>
         /// </summary>
@@ -170,15 +181,19 @@ namespace encryption
             key_found_textblock = ((Grid)sender).Children[2] as TextBlock;
         }
 
-
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Tapped(object sender, TappedRoutedEventArgs e)
         {
             byte[] message = Encoding.UTF8.GetBytes(message_textbox.Text);
-            byte[] publicKey = await KeyStore.Instance.GetPublicKey("conact@email.address");
 
-            byte[] dataToSend = PGP.Encrypt(message, publicKey, true, true);
+            if (publicKey != null)
+            {
+                byte[] dataToSend = PGP.Encrypt(message, publicKey, true, true);
 
+                DeliveryManager mgr = new DeliveryManager();
+                await mgr.ComposeEmailAsync(contact, "Encoded message", string.Empty, "message.pgp", dataToSend);
+            }
         }
+
 
     }
 }
