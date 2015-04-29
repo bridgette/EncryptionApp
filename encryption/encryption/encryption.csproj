@@ -123,6 +123,12 @@
     </Compile>
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="TutorialPage.xaml.cs">
+      <DependentUpon>TutorialPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TutorialPage2.xaml.cs">
+      <DependentUpon>TutorialPage2.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -163,6 +169,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ShareKeyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TutorialPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TutorialPage2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

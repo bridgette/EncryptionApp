@@ -1,6 +1,4 @@
 ﻿using encryption.Common;
-using encryption.Crypto;
-using Org.BouncyCastle.Bcpg.OpenPgp;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +7,6 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Graphics.Display;
-using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -26,12 +23,12 @@ namespace encryption
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class GenerateKeyPage : Page
+    public sealed partial class TutorialPage : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
 
-        public GenerateKeyPage()
+        public TutorialPage()
         {
             this.InitializeComponent();
 
@@ -108,26 +105,16 @@ namespace encryption
         {
             this.navigationHelper.OnNavigatedFrom(e);
         }
-
         #endregion
-
-        private async void createkeybutton_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        
+        /// <summary>
+        /// go to next tutorial page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void nextbutton_tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-
-            PgpPublicKeyRing publicKey;
-            PgpSecretKeyRing privateKey;
-
-            PGP.GenerateKeyPair(userid_box.Text, password_box.Text, out publicKey, out privateKey);
-
-            KeyStore.Instance.StoreKeyPair(privateKey, publicKey);
-
-            // todo: some key-generating loading animation
-
-            MessageDialog msg = new MessageDialog("You are good to go! :-)", "Success");
-            await msg.ShowAsync();
-			
-			// navigate to next tutorial slide
-			this.Frame.Navigate(typeof(TutorialPage));
+            this.Frame.Navigate(typeof(TutorialPage2));
         }
 
     }

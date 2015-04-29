@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="encryption.TutorialPage2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:encryption"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+        	<TextBlock HorizontalAlignment="Left" Margin="24,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="351" Width="255" FontSize="20" FontFamily="Segoe UI Light">
+        		<Run Text="You also have a private key."/>
+        		<LineBreak/>
+        		<Run/>
+        		<LineBreak/>
+        		<Run Text="The lock we talked about earlier? This is the key to that lock. It decrypts any messages your friends send you."/>
+        		<LineBreak/>
+        		<Run/>
+        		<LineBreak/>
+        		<Run Text="We protected your private key with your password."/>
+        	</TextBlock>
+        	<Button Content="Got it" HorizontalAlignment="Left" Margin="229,552,0,0" VerticalAlignment="Top" BorderThickness="1" FontFamily="Segoe UI Light" Tapped="gotitbutton_tapped"/>
+
+        </Grid>
+    </Grid>
+</Page>

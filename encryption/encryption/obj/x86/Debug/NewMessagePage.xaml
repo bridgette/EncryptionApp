@@ -8,14 +8,13 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-    	<TextBox x:ConnectionId='1' x:Name="message_textbox" HorizontalAlignment="Left" Margin="45,169,0,0" TextWrapping="Wrap" Text="Enter message here" VerticalAlignment="Top" Height="292" Width="305"                                    Foreground="#FF626262"                                     />
-    	<Button x:ConnectionId='2' Content="Send" HorizontalAlignment="Left" Margin="144,508,0,0" VerticalAlignment="Top"                      />
-    	<TextBlock x:Name="keyfound_textblock" HorizontalAlignment="Left" Margin="111,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13" Text="Key for Contact Found"/>
-    	<TextBlock x:Name="explaination_textblock" HorizontalAlignment="Left" Margin="88,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" FontWeight="Light">
-    		<Run Text="Pick a c"/>
-    		<Run Text="ontact"/>
-    	</TextBlock>
+    <Grid x:ConnectionId='1'                     >
+        <TextBox x:ConnectionId='2' x:Name="message_textbox" HorizontalAlignment="Left" Margin="10,167,0,0" TextWrapping="Wrap" Text="Enter message here" VerticalAlignment="Top" Height="292" Width="305"                                    Foreground="#FF626262"                                     />
+        <Button x:ConnectionId='3' Content="Send" HorizontalAlignment="Left" Margin="320,391,0,0" VerticalAlignment="Top" Height="77" Width="70" BorderThickness="1" Padding="0" MinHeight="30" MinWidth="50"                         />
+        <TextBlock x:Name="keyfound_textblock" HorizontalAlignment="Left" Margin="20,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13" Text="-"/>
+        <TextBlock x:ConnectionId='4' x:Name="explaination_textblock" HorizontalAlignment="Left" Margin="20,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontWeight="Light"                            >
+    		<Run Text="Pick a contact"/>
+        </TextBlock>
 
     </Grid>
 </Page>

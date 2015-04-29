@@ -19,8 +19,8 @@
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\x86\Debug\encryption.exe">
       <PackagePath>encryption.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\x86\Debug\WP8BouncyCastle.dll">
-      <PackagePath>WP8BouncyCastle.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\packages\Portable.BouncyCastle.1.7.0.2\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10\crypto.dll">
+      <PackagePath>crypto.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\SQLite.WP81\3.8.9\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
@@ -64,8 +64,17 @@
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\x86\Debug\NewMessagePage.xbf">
       <PackagePath>NewMessagePage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\x86\Debug\ReadMessagePage.xbf">
+      <PackagePath>ReadMessagePage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\x86\Debug\ShareKeyPage.xbf">
       <PackagePath>ShareKeyPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\x86\Debug\TutorialPage.xbf">
+      <PackagePath>TutorialPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\x86\Debug\TutorialPage2.xbf">
+      <PackagePath>TutorialPage2.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\breiche\Desktop\EncryptionApp\encryption\encryption\bin\x86\Debug\encryption.xr.xml">
       <PackagePath>encryption.xr.xml</PackagePath>

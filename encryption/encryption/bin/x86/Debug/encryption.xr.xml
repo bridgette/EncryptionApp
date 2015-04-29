@@ -12,25 +12,35 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="ColumnDefinitions" />
+      <RootEvent Name="SizeChanged" />
+      <RootEvent Name="Loaded" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Children" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="MinHeight" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="FontFamily" />
       <RootEvent Name="Tapped" />
-      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="HorizontalAlignment" />
@@ -50,23 +60,37 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="CharacterSpacing" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Inlines" />
-      <RootProperty Name="FontWeight" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="CharacterSpacing" />
+      <RootProperty Name="FontStretch" />
       <RootEvent Name="Tapped" />
     </RootType>
-    <RootType FullName="encryption.GenerateKeyPage" />
-    <RootType FullName="encryption.GetKeyPage" />
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
+    <RootType FullName="encryption.GenerateKeyPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="encryption.GetKeyPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="encryption.MainPage" />
     <RootType FullName="encryption.NewMessagePage" />
+    <RootType FullName="encryption.ReadMessagePage" />
     <RootType FullName="encryption.ShareKeyPage" />
+    <RootType FullName="encryption.TutorialPage" />
+    <RootType FullName="encryption.TutorialPage2" />
   </Roots.RootTypes>
 </Roots>

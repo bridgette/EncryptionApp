@@ -15,8 +15,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
-
 namespace encryption
 {
     /// <summary>
@@ -36,15 +34,30 @@ namespace encryption
         public MainPage()
         {
             Current = this;  
-
             this.InitializeComponent();
-
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             KeyStore.Instance.Init();
             PopulateContacts.CreateContactStore();
 
         }
+
+        private static string FIRST_RUN_LOOKUP = "FIRST_RUN";
+        public bool IsFirstRun()
+        {
+            var localsettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            var has_been_run = localsettings.Values[FIRST_RUN_LOOKUP];
+            if (has_been_run == null)
+            {
+                //localsettings.Values[FIRST_RUN_LOOKUP] = "42";
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void NavigateToFilePage()
         {
             if (FileEvent.Files != null && FileEvent.Files.Count > 0)
@@ -84,11 +97,6 @@ namespace encryption
             this.Frame.Navigate(typeof(ShareKeyPage));
         }
 
-        private void createkey_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(GenerateKeyPage));
-        }
-
         private void getkey_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(GetKeyPage));
@@ -97,6 +105,17 @@ namespace encryption
         private void newmessage_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(NewMessagePage));
+        }
+
+        bool ranOnceThisSession = false;
+        private void mainpage_hasframe(object sender, Windows.UI.Xaml.SizeChangedEventArgs e)
+        {
+            bool isFirstRun = IsFirstRun();
+            if (isFirstRun && !ranOnceThisSession)
+            {
+                this.Frame.Navigate(typeof(GenerateKeyPage));
+                ranOnceThisSession = true;
+            }
         }
     }
 }
