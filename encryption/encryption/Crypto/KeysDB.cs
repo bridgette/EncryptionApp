@@ -25,6 +25,7 @@ namespace encryption.Crypto
             {
                 CreateDatabase();
             }
+
         }
 
         public async Task<int> AddPublicKey(PublicKey key)

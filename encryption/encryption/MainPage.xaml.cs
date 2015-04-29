@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -38,18 +39,18 @@ namespace encryption
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             KeyStore.Instance.Init();
-            PopulateContacts.CreateContactStore();
+            //PopulateContacts.CreateContactStore();
 
         }
 
         private static string FIRST_RUN_LOOKUP = "FIRST_RUN";
         public bool IsFirstRun()
-        {
+        {            
             var localsettings = Windows.Storage.ApplicationData.Current.LocalSettings;
             var has_been_run = localsettings.Values[FIRST_RUN_LOOKUP];
             if (has_been_run == null)
             {
-                //localsettings.Values[FIRST_RUN_LOOKUP] = "42";
+                localsettings.Values[FIRST_RUN_LOOKUP] = "42";
                 return true;
             }
             else

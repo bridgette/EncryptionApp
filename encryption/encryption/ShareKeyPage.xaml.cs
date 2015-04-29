@@ -131,6 +131,7 @@ namespace encryption
             if (key != null)
             {
                 await MailHelper.ComposeEmailAsync(contact, "My public key", "", "publickey.pgpkey", key);
+                this.Frame.Navigate(typeof(MainPage));
             }
             else
             {

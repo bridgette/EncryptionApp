@@ -192,7 +192,7 @@ namespace encryption
             {
                 byte[] dataToSend = PGP.Encrypt(message, publicKey, true, true);
                
-                await MailHelper.ComposeEmailAsync(contact, "Encoded message", string.Empty, "message.pgp", dataToSend);
+                await MailHelper.ComposeEmailAsync(contact, "Encoded message", string.Empty, "message.pgp", dataToSend);                
             }
         }
 
