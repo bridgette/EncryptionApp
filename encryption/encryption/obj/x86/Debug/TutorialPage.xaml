@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    AllowDrop="True" Background="#FF4D0101">
 
     <Grid x:Name="LayoutRoot" Margin="0,1.333,0,-1.333">
 
@@ -24,21 +24,28 @@
         <!-- Title Panel -->
 
         <!--TODO: Content should be placed within the following grid-->
-        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,11,19,-2">
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="20,-30,18,39">
         	<Grid.RowDefinitions>
         		<RowDefinition Height="53*"/>
         		<RowDefinition Height="578*"/>
         	</Grid.RowDefinitions>
-        	<Button x:ConnectionId='1' Content="What else do I got?" HorizontalAlignment="Left" Margin="157,504.5,0,-0.167" Grid.Row="1" VerticalAlignment="Top" Height="74" Width="195"                            BorderThickness="1" FontFamily="Segoe UI Light"/>
-        	<TextBlock HorizontalAlignment="Left" Margin="26,25.5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Boom!" VerticalAlignment="Top" FontSize="35" FontFamily="Segoe UI Light"/>
-        	<TextBlock HorizontalAlignment="Left" Margin="66,72.5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="You should feel more secure already." VerticalAlignment="Top"/>
-        	<TextBlock HorizontalAlignment="Left" Margin="47,177.5,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="254" Width="216" FontSize="20" FontFamily="Segoe UI Light">
-        		<Run Text="You now have a public key. Your friends will use this to send you messages only you can see!"/>
+        	<Button x:ConnectionId='1' Content="What else?" HorizontalAlignment="Left" Margin="157,504.5,0,-0.167" Grid.Row="1" VerticalAlignment="Top" Height="74" Width="195"                            BorderThickness="1" FontFamily="Segoe UI Light"/>
+        	<TextBlock HorizontalAlignment="Left" Margin="68,30.5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Boom!" VerticalAlignment="Top" FontSize="35" FontFamily="Segoe UI Light" RenderTransformOrigin="1.002,0.536"/>
+        	<TextBlock HorizontalAlignment="Left" Margin="47,100.5,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="373" Width="277" FontSize="25" FontFamily="Segoe UI Light" FontWeight="ExtraLight">
+        		<Run Text="Now you have a "/>
+        		<Run FontWeight="Bold" Text="public key."/>
+        		<Run Text=" Your friends will use this to send messages only "/>
+        		<Run Text="you "/>
+        		<Run Text="can decrypt! #sorryNotSorry #NSA"/>
         		<LineBreak/>
         		<Run/>
         		<LineBreak/>
+        		<Run/>
+        		<LineBreak/>
+        		<LineBreak/>
         		<Run Text="Think of your public key as a padlock that only you can open."/>
         	</TextBlock>
+        	<Image Margin="20,24.5,299,510.833" Grid.Row="1" Source="Assets/lock_white.png" Stretch="Fill"/>
 
         </Grid>
     </Grid>

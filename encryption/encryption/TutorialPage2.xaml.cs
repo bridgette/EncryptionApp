@@ -107,8 +107,7 @@ namespace encryption
         }
         #endregion
 
-
-        private void gotitbutton_tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        private void nextbutton_tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }

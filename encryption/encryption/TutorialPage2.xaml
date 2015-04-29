@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    AllowDrop="True" Background="#FF4D0101">
 
     <Grid x:Name="LayoutRoot">
 
@@ -24,9 +24,13 @@
         <!-- Title Panel -->
 
         <!--TODO: Content should be placed within the following grid-->
-        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-        	<TextBlock HorizontalAlignment="Left" Margin="24,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="351" Width="255" FontSize="20" FontFamily="Segoe UI Light">
-        		<Run Text="You also have a private key."/>
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="22,-2,16,11">
+        	<TextBlock HorizontalAlignment="Left" Margin="24,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="405" Width="314" FontSize="24" FontFamily="Segoe UI Light">
+        		<Run Text="You also have a "/>
+        		<Run FontWeight="Bold" Text="private key"/>
+        		<Run Text="."/>
+        		<LineBreak/>
+        		<Run/>
         		<LineBreak/>
         		<Run/>
         		<LineBreak/>
@@ -34,9 +38,12 @@
         		<LineBreak/>
         		<Run/>
         		<LineBreak/>
+        		<Run/>
+        		<LineBreak/>
         		<Run Text="We protected your private key with your password."/>
         	</TextBlock>
-        	<Button Content="Got it" HorizontalAlignment="Left" Margin="229,552,0,0" VerticalAlignment="Top" BorderThickness="1" FontFamily="Segoe UI Light" Tapped="gotitbutton_tapped"/>
+        	<Button Content="Got it." HorizontalAlignment="Left" Margin="157,504.5,0,-0.167" VerticalAlignment="Top" Height="74" Width="195" Tapped="nextbutton_tapped" BorderThickness="1" FontFamily="Segoe UI Light"/>
+        	<Image Margin="24,30,274,537" Source="Assets/key_white.png" Stretch="Fill"/>
 
         </Grid>
     </Grid>

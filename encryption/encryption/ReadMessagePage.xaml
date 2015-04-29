@@ -8,12 +8,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Private Key Password" VerticalAlignment="Top"/>
-        <TextBox x:Name="password_box" HorizontalAlignment="Left" Margin="10,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="380"/>
-        <Button x:Name="decrypt_button" Content="Decrypt" HorizontalAlignment="Left" Margin="281,62,0,0" VerticalAlignment="Top" Tapped="decrypt_button_Tapped"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Message" VerticalAlignment="Top"/>
-        <TextBox x:Name="message_box" HorizontalAlignment="Left" Margin="10,160,0,0" TextWrapping="Wrap" Text="Your message will be here." VerticalAlignment="Top" Height="305" Width="380"/>
+    <Grid Background="#FF4D0101">
+        <TextBlock HorizontalAlignment="Left" Margin="24,34,0,0" TextWrapping="Wrap" Text="You got a message! Enter the password for your private key:" VerticalAlignment="Top" FontSize="25" FontFamily="Segoe UI Light" Height="90" Width="357"/>
+        <TextBox x:Name="password_box" HorizontalAlignment="Left" Margin="0,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="400"/>
+        <Button x:Name="decrypt_button" Content="Decrypt" HorizontalAlignment="Left" Margin="141,205,0,0" VerticalAlignment="Top" Tapped="decrypt_button_Tapped"/>
+        <TextBox x:Name="message_box" HorizontalAlignment="Left" Margin="0,299,0,0" TextWrapping="Wrap" Text="Your message will be here." VerticalAlignment="Top" Height="305" Width="400"/>
 
 
     </Grid>
