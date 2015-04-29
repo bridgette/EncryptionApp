@@ -1,4 +1,5 @@
-﻿using System;
+﻿using encryption.Common;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -126,6 +127,76 @@ namespace encryption
 
             // TODO: Save application state and stop any background activity
             deferral.Complete();
+        }
+
+        protected override void OnFileActivated(FileActivatedEventArgs e)
+        {
+            // TODO: Handle file activation
+
+            // The number of files received is args.Files.Size
+            // The first file is args.Files[0].Name
+
+            Frame rootFrame = CreateRootFrame();
+            RestoreStatus(e.PreviousExecutionState);
+
+            if (rootFrame.Content == null)
+            {
+                if (!rootFrame.Navigate(typeof(MainPage)))
+                {
+                    throw new Exception("Failed to create initial page");
+                }
+            }
+
+            rootFrame.Navigate(typeof(MainPage));
+            var p = rootFrame.Content as MainPage;
+            p.FileEvent = e;            
+            p.NavigateToFilePage();
+
+            // Ensure the current window is active
+            Window.Current.Activate();
+        }
+
+        private Frame CreateRootFrame()
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+
+            // Do not repeat app initialization when the Window already has content,
+            // just ensure that the window is active
+            if (rootFrame == null)
+            {
+                // Create a Frame to act as the navigation context and navigate to the first page
+                rootFrame = new Frame();
+
+                // Set the default language
+                rootFrame.Language = Windows.Globalization.ApplicationLanguages.Languages[0];
+                //rootFrame.NavigationFailed += OnNavigationFailed;
+
+                SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
+
+                // Place the frame in the current Window
+                Window.Current.Content = rootFrame;
+            }
+
+            return rootFrame;
+        }
+
+        private async void RestoreStatus(ApplicationExecutionState previousExecutionState)
+        {
+            // Do not repeat app initialization when the Window already has content,
+            // just ensure that the window is active
+            if (previousExecutionState == ApplicationExecutionState.Terminated)
+            {
+                // Restore the saved session state only when appropriate
+                try
+                {
+                    await SuspensionManager.RestoreAsync();
+                }
+                catch (SuspensionManagerException)
+                {
+                    //Something went wrong restoring state.
+                    //Assume there is no state and continue
+                }
+            }
         }
     }
 }

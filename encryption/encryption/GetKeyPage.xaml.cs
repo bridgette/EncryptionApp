@@ -19,6 +19,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.Contacts;
 using Org.BouncyCastle.Bcpg;
+using Windows.Storage;
+using Windows.Storage.Streams;
 
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
@@ -32,6 +34,8 @@ namespace encryption
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+
+        IStorageItem PublicKeyFile;
 
         public GetKeyPage()
         {
@@ -103,6 +107,10 @@ namespace encryption
         /// handlers that cannot cancel the navigation request.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            PublicKeyFile = (e.Parameter as IStorageItem);
+            if (PublicKeyFile != null)
+                key_textbox.Text = PublicKeyFile.Name;
+
             this.navigationHelper.OnNavigatedTo(e);
         }
 
@@ -116,31 +124,21 @@ namespace encryption
         private async void savekey_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
 
-            if (contact_email != null)
-            {
-                //byte[] hexkey = Encoding.UTF8.GetBytes(key_textbox.Text);
+            if (contact_email != null && PublicKeyFile != null)
+            {           
+                // Open the file
+                StorageFile sampleFile = (PublicKeyFile as StorageFile); 
+                
+                var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
 
-                await KeyStore.Instance.AddPublicKey(contact_email, HexstringToBytes(key_textbox.Text.Trim()) );
+                DataReader dataReader = Windows.Storage.Streams.DataReader.FromBuffer(buffer);
+                byte[] fileContent = new byte[dataReader.UnconsumedBufferLength]; 
+                dataReader.ReadBytes(fileContent);                 
+                
+                await KeyStore.Instance.AddPublicKey(contact_email, fileContent );
             }
         }
-
-        private byte[] HexstringToBytes(string str)
-        {
-            int len = str.Length;
-
-            if ((len % 2) != 0)
-                throw new Exception("Invalid hex string");
-
-            byte[] buffer = new byte[len / 2];
-
-            for (int i = 0; i < len / 2; i++)
-            {
-                buffer[i] = Convert.ToByte(str.Substring(i * 2, 2), 16);
-            }
-
-            return buffer;
-        }
-        
+       
         private async void selectcontact_ontap(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
             var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -23,8 +24,19 @@ namespace encryption
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public static MainPage Current;
+
+        private FileActivatedEventArgs _fileEventArgs = null;
+        public FileActivatedEventArgs FileEvent
+        {
+            get { return _fileEventArgs; }
+            set { _fileEventArgs = value; }
+        }
+
         public MainPage()
         {
+            Current = this;  
+
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
@@ -33,6 +45,27 @@ namespace encryption
             PopulateContacts.CreateContactStore();
 
         }
+        public void NavigateToFilePage()
+        {
+            //newmessage_textblock.Text = FileEvent.Files[0].Name;
+
+            if (FileEvent.Files != null && FileEvent.Files.Count > 0)
+            {
+                // Go process key file
+                if (FileEvent.Files[0].Name.ToLower().EndsWith(".pgpkey"))
+                {
+                    this.Frame.Navigate(typeof(GetKeyPage), FileEvent.Files[0]);
+                }
+                // go process message
+                else if (FileEvent.Files[0].Name.ToLower().EndsWith(".pgp"))
+                {
+                    //this.Frame.Navigate(typeof(GenerateKeyPage), FileEvent.Files[0]);
+                }
+                //ScenarioFrame.Navigate(this.Scenarios[2].ClassType);
+            }
+        }
+
+
 
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
